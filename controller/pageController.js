@@ -1,0 +1,12 @@
+//详情页
+exports.getIndexPage=(req,res)=>{
+    res.render('detail.ejs')
+}
+//列表页
+exports.getDetailPage=(req,res)=>{
+    res.render('list.ejs')
+}
+//主页
+exports.getListPage=(req,res)=>{
+    res.render('index.ejs')
+}

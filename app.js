@@ -9,5 +9,7 @@ app.listen(8686,()=>{
 app.use('/assets',express.static('assets'));
 app.use('/uploads',express.static('uploads'));
 
+app.set('view engine','ejs');
+app.set('views',__dirname+'/views');
 
 app.use(router)
