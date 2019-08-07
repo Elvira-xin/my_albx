@@ -1,0 +1,20 @@
+$(function(){
+    $('.btnLogin').on('click',function(){
+        // console.log(123)
+        $.ajax({
+            type:'post',
+            url:'/login',
+            dataType:'json',
+            data:$('form').serialize(),
+            success:function(res){
+                if(res.code==400){
+                    console.log(555)
+                    alert(res.msg)
+                }else{
+                    console.log(789)
+                    location.href='/admin'
+                }
+            }
+        })
+    })
+})
